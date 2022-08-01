@@ -2,6 +2,8 @@
 
 #include <juce_audio_processors/juce_audio_processors.h>
 
+#include <signalflow/node/oscillators/sine.h>
+
 //==============================================================================
 class AudioPluginAudioProcessor : public juce::AudioProcessor
 {

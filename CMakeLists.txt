@@ -7,7 +7,6 @@ set(CMAKE_OSX_ARCHITECTURES "x86_64")
 add_subdirectory(./external/JUCE)                    # If you've put JUCE in a subdirectory called JUCE
 
 include_directories(
-        /usr/local/include
         ./external/signalflow/source/include
         ./external/signalflow/source/lib
 )
@@ -32,6 +31,8 @@ juce_add_plugin(AudioPluginExample
 
 target_sources(AudioPluginExample
         PRIVATE
+        ./external/signalflow/source/src/core/graph.cpp
+        ./external/signalflow/source/src/node/oscillators/sine.cpp
         ./src/PluginEditor.cpp
         ./src/PluginProcessor.cpp)
 
