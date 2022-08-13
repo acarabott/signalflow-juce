@@ -88,7 +88,6 @@ void AudioPluginAudioProcessor::prepareToPlay(double sampleRate,
     juce::ignoreUnused(sampleRate, samplesPerBlock);
 
     signalFlowOut.prepare_to_play(static_cast<unsigned int>(sampleRate));
-    graph->set_sample_rate(static_cast<int>(sampleRate));
     graph->start();
 }
 
