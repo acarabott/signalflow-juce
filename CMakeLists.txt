@@ -74,6 +74,7 @@ target_sources(AudioPluginExample
         ./external/signalflow/source/src/node/io/output/abstract.cpp
         ./external/signalflow/source/src/node/io/output/dummy.cpp
         ./external/signalflow/source/src/node/io/output/soundio.cpp
+        external/signalflow/source/src/node/io/output/juce.cpp
         ./external/signalflow/source/src/node/node-monitor.cpp
         ./external/signalflow/source/src/node/node.cpp
         ./external/signalflow/source/src/node/operators/add.cpp

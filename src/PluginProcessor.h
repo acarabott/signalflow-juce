@@ -2,6 +2,8 @@
 
 #include <juce_audio_processors/juce_audio_processors.h>
 
+#include <signalflow/core/graph.h>
+#include <signalflow/node/io/output/juce.h>
 #include <signalflow/node/oscillators/sine.h>
 
 //==============================================================================
@@ -45,6 +47,10 @@ public:
     void setStateInformation(const void *data, int sizeInBytes) override;
 
 private:
+
+    signalflow::AudioOut_JUCE signalFlowOut;
+    signalflow::AudioGraphRef graph;
+    signalflow::NodeRef sineOsc;
     //==============================================================================
     JUCE_DECLARE_NON_COPYABLE_WITH_LEAK_DETECTOR(AudioPluginAudioProcessor)
 };
